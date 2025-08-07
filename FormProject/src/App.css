@@ -1,42 +1,74 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* 全体を画面中央に */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 画面高さいっぱい */
+  width: 100vw; /* 画面幅いっぱい */
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 中央揃え */
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* タイトル */
+h1 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* フォーム */
+form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center; /* フォーム内要素を中央揃え */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ラベル + 入力欄 */
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ラベル文字を中央揃え */
+  width: 100%;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* 入力欄共通 */
+input,
+textarea {
+  padding: 8px;
+  font-size: 1em;
+  margin-top: 5px;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+  text-align: center; /* 入力内容も中央揃え（好みにより） */
 }
 
-.card {
-  padding: 2em;
+/* ボタン */
+button {
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
 }
 
-.read-the-docs {
-  color: #888;
+/* 送信結果表示 */
+.submitted {
+  margin-top: 30px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
 }
